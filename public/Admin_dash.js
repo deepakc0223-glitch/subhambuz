@@ -1,9 +1,5 @@
-// 🔌 Initialize Socket.IO Connection
-const socket = io(
-    window.location.hostname === 'localhost'
-        ? 'http://localhost:3000'
-        : 'https://quickbuzz-dtle.onrender.com'
-);
+// 🔌 Initialize Socket.IO Connection (Auto-detects current domain)
+const socket = io();
 
 const leaderboardBody = document.getElementById("leaderboardBody");
 let buzzerData = [];

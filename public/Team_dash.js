@@ -1,9 +1,5 @@
-// ✅ Initialize Socket.io (Local or Deployed Environment)
-        const socket = io(
-            window.location.hostname === 'localhost'
-                ? 'http://localhost:3000'
-                : 'https://quickbuzz-dtle.onrender.com'
-        );
+// ✅ Initialize Socket.io (Auto-detects current domain)
+        const socket = io();
 
         // ✅ Fetch Team Data from Session Storage
         const teamName = sessionStorage.getItem('teamName') || "Team_X ";
