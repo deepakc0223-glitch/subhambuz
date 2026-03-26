@@ -1,0 +1,299 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #1e223f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 10vh;
+    justify-content: center;
+}
+
+/* Background */
+.background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(125% 125% at 50% 10%, #4b4f72 20%, #2a2f55 60%, #15182e 100%);
+}
+
+/* Body Styling */
+body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+nav{
+    height: 3.5rem;
+    width: 100vw;
+    background: linear-gradient(90deg, #2a2f55, #1e223f); /* Darker gradient blend */
+    box-shadow: 
+    0 3px 20px rgba(0, 0, 0, 0.2),
+    0 3px 20px rgba(0, 0, 0, 0.2),
+    0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+/*Styling Links*/
+.nav-links{
+    display: flex;
+    list-style: none; 
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+}
+.nav-links li a{
+    text-decoration: none;
+    margin: 0 0.7vw;
+    color: white;
+}
+.nav-links li a:hover {
+    color: #19cf68;
+}
+.nav-links li {
+    position: relative;
+}
+
+
+/*Styling Buttons*/
+.login-button{
+    background-color: transparent;
+    border: 1.5px solid #f2f5f7;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    margin-left: 2vw;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+}
+.login-button:hover {
+    color: #181313;
+    background-color: #f2f5f7;
+    border:1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+.join-button{
+    background-color: #ff4d4d; /* Red color for logout */
+    border: 1.5px solid #ff4d4d;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    transition: all ease-in-out 350ms;
+}
+.join-button:hover {
+    color: #f2f5f7;
+    background-color: transparent;
+    border:1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger{
+    display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 800px){
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        position: fixed;
+        background: linear-gradient(90deg, #2a2f55, #1e223f);
+        height: 3.5em;
+        width: 100vw;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        -webkit-clip-path: circle(50px at 90% -10%);
+        clip-path: circle(50px at 90% -20%);
+        transition: all 0.7s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        -webkit-clip-path: circle(200vw at 50% 50%);
+        clip-path: circle(200vw at 50% 50%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 1;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.5s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.1s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.3s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+.buzzer-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.buzzer-btn {
+    padding: 20px 40px;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    background-color: #4CAF50;
+    color: white;
+    transition: background 0.3s;
+}
+
+.buzzer-btn:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.buzzer-btn:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+#buzzerStatus {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+#stopwatch {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #ff4500;
+    display: none;
+}
+.buzzer-base {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(to bottom, #ff6347, #e53935);
+    border-radius: 20px;
+    margin: 2rem auto;
+    box-shadow: 8px 8px 10px rgba(9, 9, 9, 0.671);
+}
+
+/* Buzzer Button */
+.buzzer-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 225px;
+    height: 225px;
+    background: linear-gradient(to bottom, #907f76, #624e4e);
+    border: 1.5px solid #645d5dee;
+    border-radius: 50%;
+}
+
+/* Metal Ring */
+.buzzer-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border: 5px solid #ffffff;
+    background: linear-gradient(to bottom, #f0f0f096, #f4f3f3);
+    border-radius: 50%;
+    color:#e12a2ad7
+}
+
+/* Buzzer Click Effect */
+.buzzer-btn:active {
+    width: 180px;
+    height: 180px;
+    transition: 0.2s ease-in-out;
+}
+.buzzer-btn:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.buzzer-btn:hover:not(:disabled) {
+    background-color: #45a049;
+}
+.highlight {
+    color: rgba(85, 255, 0, 0.644);  /* Change color to red */
+    font-weight: bold;  /* Make it bold */
+}
+.teamName {
+    font-size: 24px; /* Adjust size as needed */
+    font-weight: bold;
+    color: #ffd000e6; /* White text */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 10px 20px;
+    text-align: center;
+    width: fit-content;
+}
+html {
+    background-color: #2a2f55
+}

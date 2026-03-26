@@ -1,0 +1,203 @@
+ /* 🔹 Root Colors */
+:root {
+    --primary-color: #15182e;
+    --secondary-color: #2a2f4d;
+    --accent-color: #3fd1c1;
+    --text-primary: #e0e7ff;
+    --danger-color: #ff4757;
+    --warning-color: #ffa502;
+    --success-color: #2ed573;
+}
+
+/* 🔹 Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(125% 125% at 50% 10%, #4b4f72 20%, #2a2f55 60%, #15182e 100%);
+    color: var(--text-primary);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* 🔹 Question Image */
+.question-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.question-image-container img {
+    max-width: 75%;
+    height: 30rem;
+    border-radius: 12px;
+    border: 2px solid var(--accent-color);
+}
+
+/* 🔹 Next & Previous Buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(63, 209, 193, 0.7);
+    border: none;
+    color: var(--primary-color);
+    padding: 0.8rem 1.2rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: var(--accent-color);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.nav-btn:disabled {
+    background: rgba(63, 209, 193, 0.3);
+    cursor: not-allowed;
+}
+
+/* 🔹 Quiz Section */
+.quiz-section {
+    flex: 3;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-container {
+    background: var(--secondary-color);
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1000px;
+    min-height: 600px;
+    margin: 0 auto;
+}
+
+/* 🔹 Control Section */
+.control-section {
+    width: 400px;
+    background: rgba(42, 47, 85, 0.8);
+    padding: 2rem;
+    border-left: 1px solid rgba(63, 209, 193, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* 🔹 Question Header */
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(63, 209, 193, 0.1);
+    border-radius: 8px;
+}
+
+/* 🔹 Question Text */
+.question-text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+
+/* 🔹 Leaderboard Card */
+.leaderboard-card {
+    background: var(--primary-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(63, 209, 193, 0.1);
+}
+
+/* 🔹 Control Buttons */
+.control-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* 🔹 Buttons */
+.btn {
+    padding: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 🔹 Buzzer Button */
+.btn-buzzer {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+        #deactivateButton {
+            background: #FF5722;
+            color: white;
+        }
+.btn-buzzer.inactive {
+    background: rgba(63, 209, 193, 0.2);
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+}
+
+/* 🔹 Reset Button */
+.btn-reset {
+    background: var(--warning-color);
+    color: var(--text-primary);
+}
+
+/* 🔹 Logout Button */
+.btn-logout {
+    background: var(--danger-color);
+    color: var(--text-primary);
+}
+
+/* 🔹 Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(63, 209, 193, 0.1);
+}
+
+th {
+    background: rgba(63, 209, 193, 0.05);
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+

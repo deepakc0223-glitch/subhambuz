@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.22.1",
+    "firebase": "^11.4.0",
+    "firebase-admin": "^13.2.0",
+    "quickbuzz": "file:",
+    "socket.io": "^4.8.1"
+  },
+  "name": "quickbuzz",
+  "version": "1.0.0",
+  "main": "finisher-header.es5.min.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "---",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kunalroy0223/buzz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kunalroy0223/buzz/issues"
+  },
+  "homepage": "https://github.com/kunalroy0223/buzz#readme"
+}

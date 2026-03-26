@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2a2f55">
+    <link rel="shortcut icon" href="bell.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <link rel="stylesheet" href="Team_dash.css">
+</head>
+
+<body>
+
+    <!-- Navbar 
+    <div class="navbar">
+        <span id="teamNameDisplay">Team Dashboard</span>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div> -->
+    <div class="background">
+        <nav class="navbar">
+            <div class="teamName" id="teamNameDisplay"></div>
+            <div class="hamburger" id="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><button class="join-button" onclick="logout()">Logout</button></li>
+            </ul>
+        </nav>
+    <!-- Buzzer Section
+    <div class="buzzer-container">
+        <h1>Press the Buzzer!</h1>
+        <button id="buzzer" class="buzzer-btn" onclick="pressBuzzer()" disabled>🔔 Buzz!</button>
+        <p id="buzzerStatus">Waiting for admin to activate...</p>
+        <div id="stopwatch">⏱️ 0 ms</div>
+    </div>-->
+    <div class="buzzer-container">
+        <div class="buzzer-base">
+            <div class="buzzer-button">
+                <button id="buzzer" class="buzzer-btn" onclick="pressBuzzer()" disabled>🔔 Buzz!</button>
+            </div>
+        </div>
+        <h1>Press the <span class="highlight">Buzzer</span>!</h1>
+        <p id="buzzerStatus">Waiting for admin to activate...</p>
+        <div id="stopwatch">⏱️ 0 ms</div>
+    </div>
+    <script src="Team_dash.js"></script>
+</body>
+</html>

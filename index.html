@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .categories-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding: 10px 20px; /* Adds left & right spacing */
+    gap: 20px; /* Space between categories */
+    scrollbar-width: none; /* Hides scrollbar (for Firefox) */
+    background-color: lightblue;
+}
+
+.categories-container::-webkit-scrollbar {
+    display: none; /* Hides scrollbar (for Chrome, Safari) */
+}
+
+.category {
+    flex: 1 1 auto; /* Ensures responsiveness */
+    text-align: center;
+    min-width: 120px; /* Keeps items visible on small screens */
+}
+
+.category img {
+    width: 100px; /* Adjust image size */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.title {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .categories-container {
+        overflow-x: scroll; /* Enables horizontal scroll on smaller screens */
+        padding: 10px 30px; /* Adds extra padding on small screens */
+    }
+}
+
+    </style>
+</head>
+<body>
+   <div class="categories-container">
+    <div class="category">
+        <img src="fiction.png" alt="Fiction">
+        <span class="title">Fiction</span>
+    </div>
+
+    <div class="category">
+        <img src="path/to/non-fiction.jpg" alt="Non-Fiction">
+        <span class="title">Non-Fiction</span>
+    </div>
+
+    <div class="category">
+        <img src="path/to/academic.jpg" alt="Academic & Professional">
+        <span class="title">Academic & Professional</span>
+    </div>
+
+    <div class="category">
+        <img src="path/to/technology.jpg" alt="Technology & Computing">
+        <span class="title">Technology & Computing</span>
+    </div>
+
+    <div class="category">
+        <img src="path/to/comics.jpg" alt="Comics & Graphic Novels">
+        <span class="title">Comics & Graphic Novels</span>
+    </div>
+
+    <div class="category">
+        <img src="path/to/children.jpg" alt="Children & Young Adult">
+        <span class="title">Children & Young Adult</span>
+    </div>
+
+    <div class="category">
+        <img src="path/to/religion.jpg" alt="Religion & Spirituality">
+        <span class="title">Religion & Spirituality</span>
+    </div>
+
+    <div class="category">
+        <img src="path/to/hobbies.jpg" alt="Hobbies & Lifestyle">
+        <span class="title">Hobbies & Lifestyle</span>
+    </div>
+
+    <div class="category">
+        <img src="path/to/ebooks.jpg" alt="E-Books & Audiobooks">
+        <span class="title">E-Books & Audiobooks</span>
+    </div>
+</div>
+
+</body>
+</html>
